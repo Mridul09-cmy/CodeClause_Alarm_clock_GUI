@@ -1,0 +1,15 @@
+The necessary libraries are imported: tkinter for creating the GUI, datetime for working with dates and times, time for introducing delays, and winsound for playing the alarm sound.
+
+The Alarm function is defined. It takes a parameter set_alarm_timer which represents the time at which the alarm should go off. Inside the function, it enters an infinite loop using while True. It sleeps for 1 second using time.sleep(1) to avoid excessive CPU usage. Then, it retrieves the current time using datetime.datetime.now() and formats it to get the current time and date. If the current time matches the set alarm time, it plays the alarm sound using winsound.PlaySound and breaks out of the loop.
+
+The get_alarm_time function is defined. It retrieves the user-inputted alarm time from the hour, min, and sec variables. It concatenates these values into a string representing the desired alarm time and calls the Alarm function with this time.
+
+The Tkinter window is created with a title, size, and background color.
+
+Labels and entry fields are created for the user to input the alarm time. The labels provide instructions and the entry fields store the inputted values in the hour, min, and sec variables.
+
+A submit button is created. When clicked, it calls the get_alarm_time function to set the alarm based on the user's input.
+
+The window.mainloop() method is called to start the event loop and keep the window running until it is closed.
+
+Overall, this code allows the user to set an alarm time and when the current time matches the set time, it plays a sound to alert the user.
